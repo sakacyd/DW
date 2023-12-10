@@ -28,6 +28,50 @@
     />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
+    <style>
+      .dropdown-menu {
+        background-color: rgba(255, 255, 255, 0);
+        border: none;
+      }
+
+      .dropdown-menu .dropdown-item {
+        font-weight: bold;
+        color: white;
+      }
+
+      .dropdown-menu .dropdown-item:hover {
+        background-color: transparent;
+      }
+      .navbar-nav .dropdown-menu .dropdown-item:hover {
+        color: lightgray;
+      }
+      @media (max-width: 991.98px) {
+        .navbar-collapse {
+          text-align: center;
+        }
+        .navbar-nav {
+          display: inline-block;
+          margin-top: 10px;
+        }
+        .navbar-nav .dropdown-menu {
+          font-size: 13px;
+          position: static;
+          float: none;
+          width: auto;
+          margin-top: 0;
+          background-color: transparent;
+          border: none;
+          box-shadow: none;
+          text-align: center;
+        }
+        .navbar-nav .dropdown-menu .dropdown-item {
+          color: gray;
+        }
+        .navbar-nav .dropdown-menu .dropdown-item:hover {
+          color: darkslategray;
+        }
+      }
+    </style>
   </head>
   <body>
     <!-- Navigation-->
@@ -58,10 +102,36 @@
                 >About Us</a
               >
             </li>
-            <li class="nav-item">
-              <a class="nav-link px-lg-3 py-3 py-lg-4" href="post.html"
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link px-lg-3 py-3 py-lg-4 dropdown-toggle"
+                data-bs-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-expanded="false"
                 >Gallery</a
               >
+              <ul class="dropdown-menu">
+                <li>
+                  <a
+                    class="dropdown-item px-lg-3 py-1 py-lg-1"
+                    href="carhartt.html"
+                    >Carhartt</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item px-lg-3 py-1 py-lg-1"
+                    href="uniqlo.html"
+                    >Uniqlo</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item px-lg-3 py-1 py-lg-1" href="#"
+                    >Something else here</a
+                  >
+                </li>
+              </ul>
             </li>
             <li class="nav-item">
               <a class="nav-link px-lg-3 py-3 py-lg-4" href="contact.html"
@@ -82,7 +152,7 @@
           <div class="col-md-10 col-lg-8 col-xl-7">
             <div class="site-heading">
               <h1>Group Project</h1>
-              <span class="subheading">Leading Clothing News</span>
+              <span class="subheading">Leading Clothing Store</span>
             </div>
           </div>
         </div>
@@ -94,15 +164,11 @@
         <div class="col-md-10 col-lg-8 col-xl-7">
           <!-- Post preview-->
           <div class="post-preview">
-            <a href="post.html">
-              <h2 class="post-title">
-                Carhartt's WIP Magazine Issue 09 – Available Now
-              </h2>
+            <a href="carhartt.html">
+              <h2 class="post-title">Carhartt's WIP Magazine Issue 09</h2>
               <h3 class="post-subtitle">
                 Now in its ninth edition, WIP magazine features a cover graced
-                by Oakland-based artist Esteban Raheem Abdul Raheem Samayoa. We
-                meet Esteban on the eve of his latest solo show, with images
-                shot by Daniel Derro Regan.
+                by Oakland-based artist Esteban Raheem Abdul Raheem Samayoa.
               </h3>
             </a>
             <p class="post-meta">
@@ -115,16 +181,18 @@
           <hr class="my-4" />
           <!-- Post preview-->
           <div class="post-preview">
-            <a href="post.html"
-              ><h2 class="post-title">
-                I believe every human has a finite number of heartbeats. I don't
-                intend to waste any of mine.
-              </h2></a
+            <a href="uniqlo.html"
+              ><h2 class="post-title">Adding Fun to the Everyday</h2>
+              <h3 class="post-subtitle">
+                Introducing the first UNIQLO x ANYA HINDMARCH collection. The
+                innovative British brand is known for championing creativity and
+                craftsmanship, while always adding a touch of fun.
+              </h3></a
             >
             <p class="post-meta">
               Posted by
-              <a href="#!">Start Bootstrap</a>
-              on September 18, 2023
+              <a href="#!">Sakahayu Pribadi</a>
+              on November 18, 2023
             </p>
           </div>
           <!-- Divider-->
@@ -161,14 +229,6 @@
               on July 8, 2023
             </p>
           </div>
-          <!-- Divider-->
-          <hr class="my-4" />
-          <!-- Pager-->
-          <div class="d-flex justify-content-end mb-4">
-            <a class="btn btn-primary text-uppercase" href="#!"
-              >Older Posts →</a
-            >
-          </div>
         </div>
       </div>
     </div>
@@ -195,10 +255,10 @@
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="https://www.tiktok.com">
+                <a href="https://www.instagram.com">
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-tiktok fa-stack-1x fa-inverse"></i>
+                    <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
                   </span>
                 </a>
               </li>
